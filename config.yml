@@ -1,0 +1,28 @@
+# If use-global-cooldown is true all repair commands (all/armor/hand) will use one cooldown, meaning one can't be used after the other until the cooldown is done
+# IF use-global-cooldown is false, all repair types will use their own cooldowns and won't stop other commands if their cooldown is active
+use-global-cooldown: false
+# Cooldowns are in seconds
+global-cooldown: 10
+hand-cooldown: 3
+all-cooldown: 10
+armor-cooldown: 7
+
+costs:
+  use: false ## Requires vault installed as well as an economy plugin
+  hand: 10.00
+  armor: 35.00
+  all: 100.00
+
+## Only 1 of these strings needs to be in the lore of the item!
+## Colors will be ignored, it only needs to be the same words/characters!
+## The whole line of the lore must match 1 line from this to stop it from
+##    being repaired!
+blacklist-lore:
+  - "Fragile"
+  - "No Repair"
+  - "No can fix!"
+aliases:
+  - "fix"
+  - "repair"
+  - "jelly"
+  

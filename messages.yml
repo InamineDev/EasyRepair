@@ -1,0 +1,29 @@
+#############
+#
+# PLACEHOLDERS
+# %cost% - The amount paid for the repair (Used in all economy messages)
+# %cooldown% - Total time for the cooldown
+#
+#
+#############
+economy:
+  not-enough: "&cYou don't have enough for that repair! ($%cost%)"
+  charged: ## %cost% is replaced by a cost!
+    hand: "&2You paid %cost% to repair the item in your hand!"
+    all: "&2You paid %cost% to repair all the items you have!"
+    armor: "&2You paid %cost% to repair the armor you're wearing!"
+repaired:
+  hand: "&aTool Repaired!"
+  all: "&aAll items repaired!"
+  armor: "&aAll equppied armor repaired!"
+cooldown: ## You can use %cooldown% in a message and it will be replaced by the total of the cooldown, not the remaining time.
+  global: "&cYou're under global cooldown! Wait %cooldown% &cbetween each use of all /repair commands!"
+  hand: "&cYou're under cooldown! Wait %cooldown% &cbetween each use of this command!"
+  all: "&cYou're under cooldown! Wait %cooldown% &cbetween each use of this command!"
+  armor: "&cYou're under cooldown! Wait %cooldown% &cbetween each use of this command!"
+noPermissions: "&cYou do not have permission to use this command!"
+## Used if the item is not a tool or if the item is at max durability
+## Only used with hand repairs
+no-repair: "&aNo repairs needed!" 
+
+reload-message: "&aCosts, Messages, and config settings have been reloaded! &4Cannot toggle costs.use this way!"

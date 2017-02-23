@@ -1,0 +1,72 @@
+name: EasyRepair
+author: Inamine
+description: Repair your gear with costs and cooldowns!
+main: me.inamine.EasyRep.EasyRepair
+version: 1.3.2
+website: https://www.spigotmc.org/resources/22684/
+softdepend: [Vault]
+commands:
+    easyrepair:
+        description: Fix your tools/items
+        usage: /<command> (hand/all/armor/reload)
+        aliases: [fix, repair, er]
+permissions:
+    easyrepair.full:
+        default: false
+        children:
+            easyrepair.*: true
+    easyrepair.*:
+        default: op
+        children:
+            easyrepair.reload: true
+            easyrepair.hand: true
+            easyrepair.armor: true
+            easyrepair.all: true
+            easyrepair.hand.bypass.cooldown: true
+            easyrepair.all.bypass.cooldown: true
+            easyrepair.armor.bypass.cooldown: true
+            easyrepair.hand.cost.free: true
+            easyrepair.all.cost.free: true
+            easyrepair.armor.cost.free: true
+    easyrepair.use:
+        default: op
+        children:
+            easyrepair.hand: true
+            easyrepair.armor: true
+            easyrepair.all: true
+    easyrepair.bypass.*:
+        default: op
+        children:
+            easyrepair.bypass.lore: true
+            easyrepair.hand.bypass.cooldown: true
+            easyrepair.all.bypass.cooldown: true
+            easyrepair.armor.bypass.cooldown: true
+            easyrepair.hand.cost.free: true
+            easyrepair.all.cost.free: true
+            easyrepair.armor.cost.free: true
+    easyrepair.bypass.lore:
+        default: op
+    easyrepair.hand.bypass.cooldown:
+        default: op
+    easyrepair.all.bypass.cooldown:
+        default: op
+    easyrepair.armor.bypass.cooldown:
+        default: op
+    easyrepair.hand.cost.half:
+        default: false
+    easyrepair.all.cost.half:
+        default: false
+    easyrepair.armor.cost.half:
+        default: false
+    easyrepair.hand.cost.free:
+        default: false
+    easyrepair.all.cost.free:
+        default: false
+    easyrepair.armor.cost.free:
+        default: false
+    easyrepair.hand:
+        default: op
+    easyrepair.all:
+        default: op
+    easyrepair.armor:
+        default: op
